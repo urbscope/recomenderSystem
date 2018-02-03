@@ -1,5 +1,7 @@
 import urllib2
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 
 #Gets landmark name from Location tag. ({Location: Landmark_name})
 def getLocationName(str):
@@ -13,9 +15,9 @@ def getRating(str):
     return str[7].encode('ascii', 'ignore')
     return 0
 
-def getUserRatings(url_link, id):
-    page = urllib2.urlopen(url_link.strip())
-    soup = BeautifulSoup(page, 'html.parser')                       #Parse HTML
+def getUserRatings(source, id):
+    #page = urllib2.urlopen(url_link.strip())
+    soup = BeautifulSoup(source, 'html.parser')                       #Parse HTML
 
     name = soup.find_all("span", class_="nameText")                 #Get name of the user
 
@@ -32,18 +34,36 @@ def getUserRatings(url_link, id):
 
     result = ""
     for i in xrange(len(landmarks)):
-        result += str(id) + '\t' + str(name[0].string.encode('ascii', 'ignore')) + '\t' + str(landmarks[i]) + '\t' + str(ratings[i]) + '\n'
-
+        #result += str(id) + '\t' + str(name[0].string.encode('ascii', 'ignore')) + '\t' + str(landmarks[i]) + '\t' + str(ratings[i]) + '\n'
+        result += str(id) + '|' +  str(landmarks[i]) + '|' + str(ratings[i]) + '\n'
     return result;
 
 #File to read = str1, File to write to = str2
 def dataScrapper(str1, str2):
+    nextButton = '//button[text()="Next" and @class=""]'
     fr = open(str1, "r")        #pointer to file from which links are read
     fa = open(str2, "a+")       #pointer to file from which data is appended
     id = 0
     lines = fr.readlines()
     for r in lines:
-        fa.write(getUserRatings(r, id))
+        driver = webdriver.Firefox(executable_path='/home/sevenones/Mustafa/Python/geckodriver-v0.19.1-linux64/geckodriver')
+        result = []
+        current = ""
+        prev = ""
+        driver.get(r)
+        while True:
+            # do whatever you want
+            try:
+                current = getUserRatings(driver.page_source, id)
+                if current != prev:
+                    prev = current
+                    result.append(current)
+                driver.find_element_by_xpath(nextButton).click()
+            except NoSuchElementException:
+                break
+        driver.close()
+        for l in result:
+            fa.write(l)
         id = id + 1
     fr.close()
     fa.close()
