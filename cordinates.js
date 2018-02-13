@@ -2,7 +2,7 @@ const request = require('request');
 const fs = require('fs');
 
 var getCordinates = function ( id, code, place, callback){
-
+  var x = 0
 	var  searchResults = {
 		cordinates: ''
 	};
@@ -36,8 +36,6 @@ var getCordinates = function ( id, code, place, callback){
               // done
             }
           })
-  	    	callback(null, searchResults);
-          return 0;
         //console.log(searchResults.cordinates)
         }
         else{
@@ -48,8 +46,6 @@ var getCordinates = function ( id, code, place, callback){
               // done
             }
           })
-  	    	callback(null, searchResults);
-          return 1;
         }
         /*
 	    	var data = JSON.stringify(jsonBody, null, 4);
@@ -58,6 +54,7 @@ var getCordinates = function ( id, code, place, callback){
 	    	fs.writeFileSync('results.json', data);*/
 	    }
 	});
+  callback(null, searchResults);
 };
 
 module.exports = getCordinates;
