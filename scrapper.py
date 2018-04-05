@@ -1,3 +1,8 @@
+"""
+Collects the training data for the recommender system from TripAdvisor User Link. 
+From each profile, scrapes names and ratings of places that the user has reviewed
+"""
+
 import urllib2
 from bs4 import BeautifulSoup
 from selenium import webdriver
