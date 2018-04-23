@@ -72,10 +72,7 @@ class MatrixFactorisation():
         return self.mat
 
     def writeToFile(self):
- 		dataMat = np.matrix(self.mat)
- 		with open('traininedMat.txt','wb') as f:
- 			for line in dataMat:
- 				np.savetxt(f, line, fmt='%.2f')
+        np.savetxt("trainedMat.csv", self.mat, delimiter = ",", fmt = '%.4f')
 
 
 R = np.array([
