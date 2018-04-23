@@ -1,14 +1,14 @@
 const request = require('request');
 const fs = require('fs');
 
-var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, inLimit, inOpenNow, inRadius, callback){
+var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, inLimit, inRadius,inCat, callback){
 
 	var  searchResults = {
 		landmarks: []
 	};
 	
 	request({
-	    url: 'https://api.foursquare.com/v2/venues/explore',
+	    url: 'https://api.foursquare.com/v2/venues/search',
 	    method: 'GET',
 	    qs: {
 	        client_id: inClient_id,
@@ -17,9 +17,8 @@ var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, 
 	        query: inQuery,
 	        v: inV,
 	        limit: inLimit,
-	        openNow: inOpenNow,
 		radius: inRadius,
-	        sortByDistance: 1
+		categoryId: inCat 
 	    }
 
 	}, function (err, res, body) {
@@ -28,9 +27,23 @@ var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, 
 	        callback(new Error('err'))
 	    } 
 	    else {
+	    	
 	    	jsonBody = JSON.parse(body)
-	    
+	    	
+	    	for (var i = 0; i < jsonBody.response.venues.length; i++){
+	    		console.log('Item Found')
 
+	    		var destData = {};
+	    		destData['destinationID'] = jsonBody.response.venues[i].id;
+	    		destData['name'] = jsonBody.response.venues[i].name;
+	    		destData['latitude'] = jsonBody.response.venues[i].location.lat;
+	    		destData['longitude'] = jsonBody.response.venues[i].location.lng;
+	    		destData['address'] = jsonBody.response.venues[i].location.formattedAddress;
+	    		destData['categoryID'] = jsonBody.response.venues[i].categories[0].id;
+	    		searchResults.landmarks.push(destData);
+	    	}
+
+	    	/**
 	    	for (var i = 0; i < jsonBody.response.groups[0].items.length; i++){
 
 	    		var destData = {};
@@ -44,13 +57,14 @@ var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, 
 		    	destData['category'] = jsonBody.response.groups[0].items[i].venue.categories[0].name;
 		    	searchResults.landmarks.push(destData);
 	    	}
-
+			**/
 	    	
 	    	var data = JSON.stringify(jsonBody, null, 4);
 	    	fs.writeFileSync('file.json', data);
 	    	data = JSON.stringify(searchResults, null, 4);	
 	    	fs.writeFileSync('results.json', data);
 	    	callback(null, searchResults);
+	    	
 	    }
 	});
 };
