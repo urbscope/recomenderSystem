@@ -14,11 +14,11 @@ var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, 
 	        client_id: inClient_id,
 	        client_secret: inClient_secret,
 	        ll: inll,
-	        query: inQuery,
+	        //query: inQuery,
 	        v: inV,
 	        limit: inLimit,
-		radius: inRadius,
-		categoryId: inCat 
+			radius: inRadius,
+			categoryId: inCat 
 	    }
 
 	}, function (err, res, body) {
@@ -60,7 +60,7 @@ var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, 
 			**/
 	    	
 	    	var data = JSON.stringify(jsonBody, null, 4);
-	    	fs.writeFileSync('file.json', data);
+	    	fs.appendFileSync('file.json', data);
 	    	data = JSON.stringify(searchResults, null, 4);	
 	    	fs.writeFileSync('results.json', data);
 	    	callback(null, searchResults);

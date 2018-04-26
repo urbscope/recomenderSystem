@@ -1,0 +1,39 @@
+{
+    "landmarks": [
+        {
+            "destinationID": "4b824a4bf964a5202dcf30e3",
+            "name": "Topkapı Sarayı",
+            "latitude": 41.010864219595106,
+            "longitude": 28.981703112668626,
+            "address": [
+                "Sultanahmet",
+                "Fatih",
+                "Türkiye"
+            ],
+            "categoryID": "4bf58dd8d48988d190941735"
+        },
+        {
+            "destinationID": "55d70cc5498e1ff554f32e6e",
+            "name": "Topkapı Sarayı Saray Mutfağı",
+            "latitude": 41.012644726047,
+            "longitude": 28.984813580885838,
+            "address": [
+                "Sultanahmet",
+                "Türkiye"
+            ],
+            "categoryID": "4bf58dd8d48988d190941735"
+        },
+        {
+            "destinationID": "4bc8088f15a7ef3b6b857ada",
+            "name": "Ayasofya",
+            "latitude": 41.00806403870557,
+            "longitude": 28.978582154606567,
+            "address": [
+                "Ayasofya Myd. Sultanahmet",
+                "34122 Fatih",
+                "Türkiye"
+            ],
+            "categoryID": "4bf58dd8d48988d190941735"
+        }
+    ]
+}
