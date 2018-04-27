@@ -29,9 +29,8 @@ var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, 
 	    else {
 	    	
 	    	jsonBody = JSON.parse(body)
-	    	
 	    	for (var i = 0; i < jsonBody.response.venues.length; i++){
-	    		console.log('Item Found')
+	    		//console.log('Item Found')
 
 	    		var destData = {};
 	    		destData['destinationID'] = jsonBody.response.venues[i].id;

@@ -1,14 +1,15 @@
 var getlandmarks = require('./landmarksSearch');
 var fs = require('fs');
 var fs2 = require('fs');
-var text = "as";
+var fs_write = require('fs');	
+//var stream = fs_write.createWriteStream("data.txt");
 
-inClient_id = '';
-inClient_secret  = '';
+inClient_id = 'EECH5IF2TSK01WV2DQUKIRNT5CUVRTH0AVVDFM521E32ZVPH';
+inClient_secret  = '1LL20JSTUVM1BM4G30E0KMN1QBKU3ZDVLMO1OP5QIPWCQEOK';
 inll = '48.858,2.294';
 inQuery = 'Aqua'
 inV = '20170801';
-inLimit = 3;
+inLimit = 50;
 radius =  1000;
 category = '4fceea171983d5d06c3e9823';
 file = './CityList.txt';
@@ -42,13 +43,20 @@ for(let i = 0; i < cordinates.length; i++){
 	for(let j = 0; j < categoryIDs.length; j++){
 		getlandmarks( inClient_id, inClient_secret, cordinates[i], inQuery, inV, inLimit, radius, categoryIDs[j], function(error,response) {
 		  if (error) {
-		    console.log(error)
+		    console.log(error);
 		  } else {
 		    lmarks = response['landmarks'];
-		    console.log(lmarks);
+		    for(let i = 0; i < lmarks.length; i++){
+		    	let str = lmarks[i]['destinationID'] + ", " + lmarks[i]['name'] + ", " + lmarks[i]['categoryID'] + "\n"
+		    	fs_write.appendFile("data.txt", str, function(err) {
+				    if(err) {
+				        return console.log(err);
+				    }
+				    console.log("Done!");
+				}); 
+		    }
 		  }
-		}
-		);
+		});
 	}
 }
 
