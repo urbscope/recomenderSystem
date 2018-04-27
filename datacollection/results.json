@@ -1,39 +1,46 @@
 {
     "landmarks": [
         {
-            "destinationID": "4b824a4bf964a5202dcf30e3",
-            "name": "Topkapı Sarayı",
-            "latitude": 41.010864219595106,
-            "longitude": 28.981703112668626,
+            "destinationID": "4b53fce2f964a52014b027e3",
+            "name": "Taj Mahal | ताज महल | تاج محل (Taj Mahal)",
+            "latitude": 27.171046784508196,
+            "longitude": 78.04218722369076,
             "address": [
-                "Sultanahmet",
-                "Fatih",
-                "Türkiye"
+                "Near Agra Fort (Fatehabad Road)",
+                "Āgra 282001",
+                "Uttar Pradesh",
+                "India"
             ],
-            "categoryID": "4bf58dd8d48988d190941735"
+            "categoryID": "4deefb944765f83613cdba6e",
+            "category": "Historic Site"
         },
         {
-            "destinationID": "55d70cc5498e1ff554f32e6e",
-            "name": "Topkapı Sarayı Saray Mutfağı",
-            "latitude": 41.012644726047,
-            "longitude": 28.984813580885838,
+            "destinationID": "4b73e678f964a52065bf2de3",
+            "name": "Agra Fort | आगरा का किला | آگرہ قلعہ (Agra Fort)",
+            "latitude": 27.176606841902153,
+            "longitude": 78.0222895946034,
             "address": [
-                "Sultanahmet",
-                "Türkiye"
+                "Near Taj Mahal (Yamuna Kinara Road)",
+                "Āgra 282001",
+                "Uttar Pradesh",
+                "India"
             ],
-            "categoryID": "4bf58dd8d48988d190941735"
+            "categoryID": "4deefb944765f83613cdba6e",
+            "category": "Historic Site"
         },
         {
-            "destinationID": "4bc8088f15a7ef3b6b857ada",
-            "name": "Ayasofya",
-            "latitude": 41.00806403870557,
-            "longitude": 28.978582154606567,
+            "destinationID": "4b6558b4f964a520fded2ae3",
+            "name": "Fatehpur Sikri",
+            "latitude": 27.0977042056927,
+            "longitude": 77.67115304403573,
             "address": [
-                "Ayasofya Myd. Sultanahmet",
-                "34122 Fatih",
-                "Türkiye"
+                "Fatehpur",
+                "Fatehpur Sīkri",
+                "Uttar Pradesh",
+                "India"
             ],
-            "categoryID": "4bf58dd8d48988d190941735"
+            "categoryID": "4deefb944765f83613cdba6e",
+            "category": "Historic Site"
         }
     ]
 }

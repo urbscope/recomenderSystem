@@ -6,7 +6,7 @@ inll = '48.858,2.294';
 inQuery = 'Aqua'
 inV = '20170801';
 inLimit = 3;
-radius =  1000;
+radius =  100000;
 category = '4fceea171983d5d06c3e9823'
 
 getlandmarks( inClient_id, inClient_secret, inll, inQuery, inV, inLimit, radius, category, function(error,response) {
