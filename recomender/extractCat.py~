@@ -47,8 +47,9 @@ def extractCategories(filename):
 
 	with open('catIndex.txt', 'wb') as outfile:
 		for i in range(0, len(categoryName)):
-			outfile.write(str(categoryId[i]) + ":" +str(categoryName[i]) + ":" + str(categoryParent[i]) + "\n")
+			outfile.write(str(categoryName[i]) + ":" + str(categoryId[i]) + ":" + str(categoryParent[i]) + "\n")
+
 	with open('data.json', 'w') as outfile:
 	    json.dump(categoriesList, outfile, indent = 4)
-	    
+
 extractCategories('categories_Urbscope.json')

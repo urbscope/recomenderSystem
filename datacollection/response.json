@@ -16,6 +16,21 @@
             "description": "Comedy Club"
         },
         {
+            "destinationID": "4b54148df964a520b0b127e3",
+            "name": "Opéra Garnier",
+            "latitude": 48.872124954463864,
+            "longitude": 2.331708669662475,
+            "address": [
+                "8 rue Scribe (Rue Auber)",
+                "75009 Paris",
+                "France"
+            ],
+            "categoryID": "4bf58dd8d48988d136941735",
+            "category": "Opera House",
+            "picture": "https://igx.4sqi.net/img/general/100x100/55484500_vGKnLFZJmk0bAM3dshndPvQ2pP9ZqcC7oYAn8GhjpGI.jpg",
+            "description": "Opera House"
+        },
+        {
             "destinationID": "4d18b8c3302da1cde2d0c493",
             "name": "Grande Roue de Paris",
             "latitude": 48.865197,
@@ -29,51 +44,6 @@
             "category": "Theme Park Ride / Attraction",
             "picture": "https://igx.4sqi.net/img/general/100x100/4TNECJ0QL0KADGICDLE20V0ZOMTAD04IWT5FXKUJOKQSKU4P.jpg",
             "description": "Du 17 novembre 2017 au 05 mai 2018"
-        },
-        {
-            "destinationID": "4adcda0af964a520623421e3",
-            "name": "Centre Pompidou – Musée National d'Art Moderne",
-            "latitude": 48.860444581042955,
-            "longitude": 2.3524904251098633,
-            "address": [
-                "Place Georges Pompidou",
-                "75004 Paris",
-                "France"
-            ],
-            "categoryID": "4bf58dd8d48988d18f941735",
-            "category": "Art Museum",
-            "picture": "https://igx.4sqi.net/img/general/100x100/16102414_XX4m4n69KqIBPYtfwg4Q-zw_IxBcxFCRdKzZSBhdEII.jpg",
-            "description": "Rassemblant plus de 100 000 œuvres, les collections du Centre Pompidou constituent l’un des premiers ensembles mondiaux de référence pour l’art des 20e et 21e siècles."
-        },
-        {
-            "destinationID": "56f279c4cd10850a585f5e31",
-            "name": "Mona Lisa | La Joconde",
-            "latitude": 48.86013915274212,
-            "longitude": 2.3353367567879104,
-            "address": [
-                "Musée du Louvre (Rue de Rivoli)",
-                "75001 Paris",
-                "France"
-            ],
-            "categoryID": "56aa371be4b08b9a8d573532",
-            "category": "Exhibit",
-            "picture": "https://igx.4sqi.net/img/general/100x100/479699839_1crwds6KWmzgkMORVlRHBq5DtNypxX8mmG6hbMJEMw0.jpg",
-            "description": "Le portrait fut probablement commencé à Florence vers 1503. Il s'agirait du portrait de Lisa Gherardini, épouse de Francesco del Giocondo, marchand d'étoffes florentin, dont le nom féminisé lui valut le « surnom » de Gioconda, francisé en « Joconde »"
-        },
-        {
-            "destinationID": "4bccc4e7937ca59381baab92",
-            "name": "Basilique du Sacré-Cœur",
-            "latitude": 48.886603420322,
-            "longitude": 2.3430490493774414,
-            "address": [
-                "35 rue du Chevalier de la Barre",
-                "75018 Paris",
-                "France"
-            ],
-            "categoryID": "4bf58dd8d48988d132941735",
-            "category": "Church",
-            "picture": "https://igx.4sqi.net/img/general/100x100/36337224_fwEK239wPVnAG0aUNDTX02yNeUi1beyybt46XnsoQ7c.jpg",
-            "description": "Church"
         },
         {
             "destinationID": "4adcda10f964a5208b3521e3",
@@ -91,19 +61,19 @@
             "description": "Le Musée d'Orsay regroupe l'une des plus belles collections au monde d'œuvres impressionnistes et du XIXème siècle."
         },
         {
-            "destinationID": "4b54148df964a520b0b127e3",
-            "name": "Opéra Garnier",
-            "latitude": 48.872124954463864,
-            "longitude": 2.331708669662475,
+            "destinationID": "4bccc4e7937ca59381baab92",
+            "name": "Basilique du Sacré-Cœur",
+            "latitude": 48.886603420322,
+            "longitude": 2.3430490493774414,
             "address": [
-                "8 rue Scribe (Rue Auber)",
-                "75009 Paris",
+                "35 rue du Chevalier de la Barre",
+                "75018 Paris",
                 "France"
             ],
-            "categoryID": "4bf58dd8d48988d136941735",
-            "category": "Opera House",
-            "picture": "https://igx.4sqi.net/img/general/100x100/55484500_vGKnLFZJmk0bAM3dshndPvQ2pP9ZqcC7oYAn8GhjpGI.jpg",
-            "description": "Opera House"
+            "categoryID": "4bf58dd8d48988d132941735",
+            "category": "Church",
+            "picture": "https://igx.4sqi.net/img/general/100x100/36337224_fwEK239wPVnAG0aUNDTX02yNeUi1beyybt46XnsoQ7c.jpg",
+            "description": "Church"
         },
         {
             "destinationID": "4adcda09f964a520ea3321e3",
@@ -121,6 +91,36 @@
             "description": "Monument / Landmark"
         },
         {
+            "destinationID": "4adcda09f964a520e83321e3",
+            "name": "Cathédrale Notre-Dame de Paris",
+            "latitude": 48.85312443201169,
+            "longitude": 2.3495614528656006,
+            "address": [
+                "6 place du parvis Notre-Dame (Place Jean-Paul II)",
+                "75004 Paris",
+                "France"
+            ],
+            "categoryID": "4bf58dd8d48988d132941735",
+            "category": "Church",
+            "picture": "https://igx.4sqi.net/img/general/100x100/48935851_ka0ublJA7zBwOeFOT3jzixqfMm6h6WRY3zrYWOgdzbk.jpg",
+            "description": "Fondée en 1163, Notre-Dame de Paris est une cathédrale gothique située sur l'Île de la Cité."
+        },
+        {
+            "destinationID": "4adcda0af964a520623421e3",
+            "name": "Centre Pompidou – Musée National d'Art Moderne",
+            "latitude": 48.860444581042955,
+            "longitude": 2.3524904251098633,
+            "address": [
+                "Place Georges Pompidou",
+                "75004 Paris",
+                "France"
+            ],
+            "categoryID": "4bf58dd8d48988d18f941735",
+            "category": "Art Museum",
+            "picture": "https://igx.4sqi.net/img/general/100x100/16102414_XX4m4n69KqIBPYtfwg4Q-zw_IxBcxFCRdKzZSBhdEII.jpg",
+            "description": "Rassemblant plus de 100 000 œuvres, les collections du Centre Pompidou constituent l’un des premiers ensembles mondiaux de référence pour l’art des 20e et 21e siècles."
+        },
+        {
             "destinationID": "4adcda10f964a520af3521e3",
             "name": "Musée du Louvre",
             "latitude": 48.86084691113991,
@@ -136,19 +136,19 @@
             "description": "Plus grand musée de France, le Louvre est un ancien palais royal qui accueille aujourd'hui une riche collection d'art du monde entier."
         },
         {
-            "destinationID": "4adcda09f964a520e83321e3",
-            "name": "Cathédrale Notre-Dame de Paris",
-            "latitude": 48.85312443201169,
-            "longitude": 2.3495614528656006,
+            "destinationID": "56f279c4cd10850a585f5e31",
+            "name": "Mona Lisa | La Joconde",
+            "latitude": 48.86013915274212,
+            "longitude": 2.3353367567879104,
             "address": [
-                "6 place du parvis Notre-Dame (Place Jean-Paul II)",
-                "75004 Paris",
+                "Musée du Louvre (Rue de Rivoli)",
+                "75001 Paris",
                 "France"
             ],
-            "categoryID": "4bf58dd8d48988d132941735",
-            "category": "Church",
-            "picture": "https://igx.4sqi.net/img/general/100x100/48935851_ka0ublJA7zBwOeFOT3jzixqfMm6h6WRY3zrYWOgdzbk.jpg",
-            "description": "Fondée en 1163, Notre-Dame de Paris est une cathédrale gothique située sur l'Île de la Cité."
+            "categoryID": "56aa371be4b08b9a8d573532",
+            "category": "Exhibit",
+            "picture": "https://igx.4sqi.net/img/general/100x100/479699839_1crwds6KWmzgkMORVlRHBq5DtNypxX8mmG6hbMJEMw0.jpg",
+            "description": "Le portrait fut probablement commencé à Florence vers 1503. Il s'agirait du portrait de Lisa Gherardini, épouse de Francesco del Giocondo, marchand d'étoffes florentin, dont le nom féminisé lui valut le « surnom » de Gioconda, francisé en « Joconde »"
         }
     ]
 }

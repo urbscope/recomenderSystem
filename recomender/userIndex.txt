@@ -1,0 +1,5 @@
+1:waq
+2:Mot
+3:Bur
+4:Yus
+5:Abd

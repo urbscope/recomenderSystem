@@ -17,11 +17,12 @@ getlandmarks( inClient_id, inClient_secret, inll, inQuery, inV, inLimit, radius,
     console.log(error)
   } else {
     //console.log(response)
-    getPhotos( inClient_id, inClient_secret, inV, picLimit, picSize, response, function(error,response) {
+    getPhotos(response, function(error,response) {
 	  if (error) {
 	    console.log(error)
 	  } else {
 	    result= (response)
+	    console.log(response)
 	  }
 	})
 
