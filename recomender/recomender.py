@@ -1,6 +1,9 @@
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+from numpy import genfromtxt
+
+DATAFILE = 'ratings.csv'
 
 class MatrixFactorisation():
 
@@ -74,20 +77,22 @@ class MatrixFactorisation():
     def writeToFile(self):
         np.savetxt("trainedMat.csv", self.mat, delimiter = ",", fmt = '%.4f')
 
+    def generateTrainingMat(self, fileName):
+        self.datMat = genfromtxt(fileName, delimiter=',')
+        return self.datMat
 
-R = np.array([
-[5, 3, 0, 1],
-[4, 0, 0, 1],
-[1, 1, 0, 5],
-[1, 0, 0, 4],
-[0, 1, 5, 4],
-])
 
-mf = MatrixFactorisation(R, K=2, alpha=0.1, beta=0.01, iterCount=100)
+
+
+R = genfromtxt(DATAFILE, delimiter=',')
+mf = MatrixFactorisation(R, K=4, alpha=0.1, beta=0.01, iterCount=100)
+
+
+# mf = MatrixFactorisation(R, K=2, alpha=0.1, beta=0.01, iterCount=100)
 trianingProcess= mf.train()
 mf.getFullMat()
 mf.writeToFile()
-#print mf.userBias
+print mf.userBias
 
 
 

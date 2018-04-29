@@ -1,8 +1,8 @@
 var getlandmarks = require('./landmarksSearch');
 var getPhotos = require('./getPhotos')
 
-inClient_id = 'EECH5IF2TSK01WV2DQUKIRNT5CUVRTH0AVVDFM521E32ZVPH';
-inClient_secret  = '1LL20JSTUVM1BM4G30E0KMN1QBKU3ZDVLMO1OP5QIPWCQEOK';
+inClient_id = '';
+inClient_secret  = '';
 inll = '48.858,2.294';
 inQuery = 'Aqua'
 inV = '20170801';

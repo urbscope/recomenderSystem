@@ -1,8 +1,8 @@
 const request = require('request');
 const fs = require('fs');
 
-const inClient_id = 'EECH5IF2TSK01WV2DQUKIRNT5CUVRTH0AVVDFM521E32ZVPH';
-const inClient_secret  = '1LL20JSTUVM1BM4G30E0KMN1QBKU3ZDVLMO1OP5QIPWCQEOK';
+const inClient_id = '';
+const inClient_secret  = '';
 const inV = '20170801';
 const limit = 1;
 const picSize = '100x100'
