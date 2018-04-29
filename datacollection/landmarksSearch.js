@@ -1,4 +1,5 @@
 const request = require('request');
+var getPhotos = require('./getPhotos')
 const fs = require('fs');
 
 var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, inLimit, inRadius,inCat, callback){
@@ -32,14 +33,17 @@ var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, 
 	    	for (var i = 0; i < jsonBody.response.venues.length; i++){
 	    		//console.log('Item Found')
 
+	    		/*
 	    		var destData = {};
 	    		destData['destinationID'] = jsonBody.response.venues[i].id;
+	    		photo = getPhotos(inClient_id, inClient_secret,inV, 1, jsonBody.response.venues[i].id )
 	    		destData['name'] = jsonBody.response.venues[i].name;
 	    		destData['latitude'] = jsonBody.response.venues[i].location.lat;
 	    		destData['longitude'] = jsonBody.response.venues[i].location.lng;
 	    		destData['address'] = jsonBody.response.venues[i].location.formattedAddress;
 	    		destData['categoryID'] = jsonBody.response.venues[i].categories[0].id;
-	    		searchResults.landmarks.push(destData);
+	    		destData['category'] = jsonBody.response.venues[i].categories[0].name;*/
+	    		searchResults.landmarks.push(jsonBody.response.venues[i].id);
 	    	}
 
 	    	/**
@@ -58,10 +62,10 @@ var getLandmarks = function ( inClient_id, inClient_secret, inll, inQuery, inV, 
 	    	}
 			**/
 	    	
-	    	var data = JSON.stringify(jsonBody, null, 4);
-	    	fs.appendFileSync('file.json', data);
-	    	data = JSON.stringify(searchResults, null, 4);	
-	    	fs.writeFileSync('results.json', data);
+	    	//var data = JSON.stringify(jsonBody, null, 4);
+	    	//fs.appendFileSync('file.json', data);
+	    	//data = JSON.stringify(searchResults, null, 4);	
+	    	//fs.writeFileSync('results.json', data);
 	    	callback(null, searchResults);
 	    	
 	    }

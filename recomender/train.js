@@ -1,6 +1,6 @@
 var pyShell = require('python-shell-master');
 
-var shell = new pyShell('recomender.py');
+var shell = new pyShell('predictions.py');
 
 shell.end(function (err){
 	if (err){
