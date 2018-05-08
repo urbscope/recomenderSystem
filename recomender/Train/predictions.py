@@ -3,13 +3,14 @@
 import numpy as np
 from numpy import genfromtxt
 
-DATAFILE = 'ratings.csv'
+#DATAFILE = 'ratings.csv'
 
 class MatrixFactorisation():
 
     def __init__(self, datMat, K, alpha, beta, iterCount):
 
         self.datMat = datMat
+        #print datMat
         self.userCount, self.itemCount = datMat.shape
         self.K = K
         self.alpha = alpha
@@ -39,8 +40,8 @@ class MatrixFactorisation():
             rmse = self.rmse()
 
             training_process.append((i, rmse))
-            if (i+1) % 10 == 0:
-                print("Iteration: %d ; error = %.4f" % (i+1, rmse))
+            # if (i+1) % 10 == 0:
+            #     print("Iteration: %d ; error = %.4f" % (i+1, rmse))
 
         return training_process
 
@@ -66,7 +67,6 @@ class MatrixFactorisation():
             self.Q[j, :] += self.alpha * (err * self.P[i, :] - self.beta * self.Q[j,:])
 
     def getRating(self, i, j):
-        
         prediction = self.b + self.userBias[i] + self.itemBias[j] + self.P[i, :].dot(self.Q[j, :].T)
         return prediction
 
@@ -84,15 +84,15 @@ class MatrixFactorisation():
 
 
 
-R = genfromtxt(DATAFILE, delimiter=',')
-mf = MatrixFactorisation(R, K=4, alpha=0.1, beta=0.01, iterCount=100)
+#R = genfromtxt(DATAFILE, delimiter=',')
+#mf = MatrixFactorisation(R, K=4, alpha=0.1, beta=0.01, iterCount=100)
 
 
 # mf = MatrixFactorisation(R, K=2, alpha=0.1, beta=0.01, iterCount=100)
-trianingProcess= mf.train()
-mf.getFullMat()
-mf.writeToFile()
-print mf.userBias
+#trianingProcess= mf.train()
+#mf.getFullMat()
+#mf.writeToFile()
+#print mf.userBias
 
 
 
